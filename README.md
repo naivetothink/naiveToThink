@@ -1,37 +1,54 @@
-## Welcome to GitHub Pages
+Jekyll Xixia
+============
 
-You can use the [editor on GitHub](https://github.com/naivetothink/naiveToThink/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+* Get it from [github](https://github.com/zxixia/jekyll-xixia).
+* See the [live demo](http://xixia.info/jekyll-xixia/).
+* See it [in action on my own blog](http://xixia.info/).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+A simple and clean Jekyll theme using [bootstrap](http://getbootstrap.com)
+(not to be confused with jekyll-bootstrap) that's easy to modify and very
+modular in component and element reuse.
 
-### Markdown
+The theme works well on mobile phones, using a collapsable nav bar and hiding the
+sidebar. The links pane in the sidebar is available on mobile through the nav menu,
+and you can do the same thing for any other sections added to the sidebar.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Don't forget to occassionally merge against my upstream repository so you can get
+the latest changes. Pull requests are encouraged and accepted!
 
-```markdown
-Syntax highlighted code block
+Preview
+=======
+![Xixia](/assets/images/preview.png)
 
-# Header 1
-## Header 2
-### Header 3
+License
+=======
 
-- Bulleted
-- List
+The content of this theme is distributed and licensed under a
+![License Badge](assets/images/cc_by_88x31.png)
+[Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
 
-1. Numbered
-2. List
+    This license lets others distribute, remix, tweak, and build upon your work,
+    even commercially, as long as they credit you for the original creation. This
+    is the most accommodating of licenses offered. Recommended for maximum
+    dissemination and use of licensed materials.
 
-**Bold** and _Italic_ and `Code` text
+In other words: you can do anything you want with this theme on any site, just please
+provide a link to [the original theme on github](https://github.com/zxixia/jekyll-xixia)
+so I get credit for the original design. Beyond that, have at it!
 
-[Link](url) and ![Image](src)
-```
+Thanks
+======
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+1，[Jekyll][jekyll-url]
 
-### Jekyll Themes
+2，[Bootstrap][bootstrap-url]
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/naivetothink/naiveToThink/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+3，[Github][github-url]
 
-### Support or Contact
+4，[Jekyll Clean Theme][Jekyll-Clean-Theme-url]
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[jekyll-url]: http://jekyllrb.com/
+[bootstrap-url]: http://getbootstrap.com/
+[github-url]: https://github.com/
+[Jekyll-Clean-Theme-url]: https://github.com/scotte/jekyll-clean
+[xixia-url]: http://xixia.info/
