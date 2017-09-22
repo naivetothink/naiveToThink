@@ -1,0 +1,178 @@
+@charset "utf-8";
+/*  个人练习V1.0 CSS Document */
+ul,li,body,p,h1,h2,h3,input,select{padding:0;
+		margin:0;font-family:Arial, Helvetica, sans-serif;		
+		}
+li{list-style:none;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{border:none;}
+body{ background:url(../image/body_bg.png) repeat-x #FFF;}
+#top{width:960px;height:30px;margin:0 auto;}
+
+.top_menu{ float:left;  }
+.top_menu li{ float:left; background:url(../image/top_ico.png) no-repeat right 14px; font-size:13px; line-height:30px; padding-right:18px; margin-left:13px;}
+.top_menu a{color:#c0c0c0;}
+.top_menu a:hover{color:#FFF;}
+.top_menu .no_dot{ background:none; padding:0;}
+
+.top_bar{ float:right; }
+.top_bar li{ float:left;line-height:30px; font-size:13px; font-weight:bold;}
+.top_bar .phone{ background:url(../image/top_ico.png) no-repeat 0 -16px;color:#FFF;
+				padding-left:35px; }
+.top_bar .help{ background:url(../image/top_ico.png)  no-repeat 0 -42px;
+				padding-left:38px;margin-left:10px;  }
+.top_bar  .help a{color:#FFF;}
+
+.top_bar .space{margin:0  8px;}
+
+
+#header { position:relative;width:960px;height:100px;margin:0 auto;background: url(../image/header_3.png) no-repeat; }
+#shopping{width:260px;height:100px; background:url(../image/shopping_bg6.png) no-repeat; float:left; position:relative;}
+#shopping p{font-size:20px; color:#f7f7f7;  margin-left:85px; margin-top:32px;}
+#shopping a{ display:block; width:114px; height:24px; background:url(../image/shopping_bg6.png) no-repeat 0px -102px; position:absolute;left:104px;top:63px;text-align:center; font-size:15px;font-weight:bold;color:#ffc200;text-decoration:none; line-height:23px;}
+#shopping a:hover{color:#f9d562;}
+
+#header h1{width:241px; position:absolute;top:0;left:50%;margin-left:-120px;
+ }
+
+#header .search{right:0;top:50%;margin-top:-15px;}
+ 
+ .search{ background:url(../image/search_bg.png) no-repeat ; width:293px; height:31px; position:absolute;  }
+ .search .text{position:absolute;left:0;top:0;width:230px;height:31px;border:none; background:none;
+ font-size:15px;font-weight:bold; color:#666666;margin-left:20px; outline:none;}
+ .search .btn{position:absolute;right:0;top:0;width:42px;height:31px;background:none;border:none; outline:none; }
+ 
+ #nav{width:960px;height:36px;margin:0 auto;padding-top:8px;}
+ 
+ #nav li{height:28px;float:left;line-height:28px;padding-right:2px; }
+ #nav a{height:28px;float:left; text-decoration:none;font-size:15px;color:#fff;font-family:Arial, Helvetica, sans-serif;}
+ #nav strong{height:28px;float:left; font-weight:normal;}
+ #nav span{height:28px;float:left;padding:0 16px;}
+ 
+ #nav a:hover,#nav .action a {background:url(../image/text.png) repeat-x left -28px; }
+ #nav a:hover strong,#nav .action strong{background: url(../image/text.png) no-repeat;}
+ #nav a:hover span,#nav .action span{background:url(../image/text.png) no-repeat right -56px;}
+ 
+ 
+ #content{width:1000px;margin:0 auto;background: url(../image/content_bg4.png) -1000px  repeat-y;margin-top:24px;}
+ #content .top_content{width:1000px;background: url(../image/content_bg4.png)  no-repeat  }
+ 
+  #content .content_bottom{background:url(../image/content_bg4.png) no-repeat -2000px bottom  ; }
+ #ab{width:940px; height:300px;margin:0px auto 0 auto;position:relative;padding-top:10px;
+	overflow: hidden;
+  }
+ 
+ #ab ul{z-index:1;}
+
+ #abs{position: absolute;width:4702px;height: 300px;left:0px;}
+ #ab li{z-index:1;float: left;}
+ #ab h2{position:absolute;
+ bottom:12px;left:36px;font-size:25px;color:#ffc600;z-index:3;}
+ #ab p{font-size:13px;color:#ffcccc;position:absolute;right:40px;bottom:10px;width:640px;z-index:3;}
+ /*#sale_bg{width:940px;height:52px;代码一样，不明原因的错误。 background:black;position:absolute;left:20px top:20px; opacity:0.8;  }
+ #sale_bg2{width:940px;height:52px;background:green;position:absolute;right:0px;bottom:0; opacity:0.8;}*/
+ #sale_bg{width:940px;height:52px;background:black;position:absolute;right:0;bottom:0px;opacity:0.8;z-index:2;}
+ 
+
+ #med{width:940px;margin:0 auto;overflow:hidden; }
+ #med #aside{float:left; width:210px;margin-top:30px;}
+ #med #aside:after{clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;}
+ #aside_menu{position:relative;width:208px;background:#ffeeb7;margin-top:1px;text-align:left;border:0 1px 1px 1px solid #f3dc94;border-radius:0 0 8px 8px;}
+ #aside_menu h2{position:relative;left:0;top:0;width:208px;height:29px;border-radius:9px 9px 0 0;font-size:15px;text-align:center;line-height:28px;color:#fff;;background:url(../image/aside_h2_bg.png);}
+ #aside_menu ul{margin:0 8px;padding:18px 0 14px 0;}
+ #aside_menu li{height:28px;width:158px;border-bottom:solid #fff 1px;line-height:28px;padding:0 0 0 34px;font-size:12px; }
+ #aside_menu a{text-decoration:none;color:#434343;}
+ #aside_menu a:hover{color:#b20e00;}
+ #aside_menu li:hover{background:#f6d362;border-bottom:solid #f7c72e 2px;}
+ 
+ #aside_bottom{width:208px;background:#f5f5f2;margin-top:13px;border:solid 1px #e8e8e3;border-radius:9px;position:relative;}
+ #aside_bottom h2{position:relative;left:0;top:0;font-size:15px; /*font-weight:normal;*/color:#666;line-height:20px;margin:10px 0 10px 14px;width:178px;}
+ #aside_bottom .text{ margin-left:14px;width:178px;height:28px;}
+ #aside_bottom .btn{height:25px;width:88px;font-size:15px; font-weight:bold;color:#fff;border-radius:3px;background:url(../image/aside_bottom_btn_bg.png);border:none;/*position:relative;*/margin-left:60px;margin-top:7px; }
+ #aside_bottom .btn:hover{background:#db0707;}
+ #aside_bottom li{font-size:13px;color:#434343;/*margin:8px 0 0 0px;*/text-align:left;border-top:2px solid #fff;position: relative;}
+ #aside_bottom li a{}
+ #aside_bottom li p{color:#434343;position:relative;left:0;top:0;/*display:block;*/width:140px;height:50px;margin:8px 0 0 70px ;/*line-height:15px;*/ }
+ #ts{line-height:35px;/*font-size:20px;*/ }
+ #aside_bottom li p:hover{color:red;}
+ 
+ #aside_bottom li #little-1{position:absolute;left:18px;top:8px; }
+ #aside_bottom li #little-2{position:absolute;left:18px;top:8px;}
+ #aside_bottom li #little-3{position:absolute;left:18px;top:8px;}
+ #aside_bottom li #little-4{position:absolute;left:18px;top:8px;} 
+#aside_bottom li .pic2{ position:-10px 0 ;} 
+
+#payment{width:210px;}
+#payment .pic1{margin:34px 0 0 20px; }
+#payment .pic2{margin:18px 0 0 18px;}
+#payment .pic3{margin:9px 0 0 66px;}
+
+#med-right{float:right;width:706px;height:300px;}
+
+#sort{margin-top:30px;height:20px;}
+#sort dl{float:left;margin:0px; }
+#sort dt{float:left;font-size:12px;color:#747474;line-height:19px;margin-right:3px;}
+#sort dd{float:left;position:relative;;width:110px;height:19px;margin:0px;margin-right:12px;}
+#sort h2{ font-weight:normal;font-size:12px;color:#747474;width:108px;height:17px;line-height:19px;border:solid #ccc 1px; text-indent:5px;}
+#sort a{display:block;width:19px;height:19px;position:absolute;top:0;left:91px;background:url(../image/shopping_bg2.png) no-repeat left -131px;z-index:2;
+
+}
+/*#sort a,*/.rotate_180{
+	-moz-transform:rotate(180deg); 
+	-webkit-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+#sort a:hover{background:url(../image/shopping_bg2.png) no-repeat -19px -131px;}
+#sort ul{border:solid 1px gray;width:108px;background:#fff;position:absolute;left:0;top:18px;z-index:1;display: none;}
+#sort li{text-indent:5px;font-size:12px;line-height:19px;text-inndent:5px;color:#747474; cursor:pointer;}
+#sort li:hover{background:#999;}
+#sort p{float:right;line-height:19px;color:#747474;font-size:12px;margin-right:10px;}
+#sort strong{color:#999;}
+#sort span{margin:0 7px;}
+#sort p .red-text{color:red;}
+
+.products{ overflow:hidden;}
+.products h2{font-size:18px;color:#666;margin:26px 0 16px 0;}
+.products ul{background:red;width:736px;}
+.products a{width:154px;height:114px;display:block;border:solid #c6c6c6 1px; }
+.products a:hover{border:solid #990 1px; }
+.products li{float:left;height:200px;margin-right:28px;}
+.products h3{font-size:15px;color:#666;line-height:17px;margin-top:6px;}
+.products p{font-size:13px;color:#666;line-height:17px;}
+.products span{color:red;}
+
+.page{text-align:center;border-bottom:solid #cdcdc8 1px;padding-bottom:6px;}
+.page a{font-size:12px;color:#b20e00;line-height:20px; text-decoration:none;display:inline-block;padding:0 7px;}
+.page a:hover,.page .active{color:#fff;background:#b20e00;}
+
+.featured{}
+.featured .fea_bg{background:url(../image/3gepic_bg2.png) no-repeat; overflow:hidden;height:198px;position:relative;}
+.featured h2{font-size:18px;color:#666;padding:20px 0 8px 8px;}
+.featured ul{margin-top:33px;padding-left:44px;}
+.featured li{float:left;padding:0 26px;}
+.featured li a{display:block;border:solid #c0c0c0 1px;}
+.featured li a:hover{border:solid #309 1px;display:block;}
+.featured .left,.right{display:block;width:35px;height:42px;  ;position:absolute;}
+.featured .left{background:url(../image/shopping_bg2.png) no-repeat left -150px;left:0;top:70px;}
+.featured .right{background:url(../image/shopping_bg2.png) no-repeat left -192px;right:0;top:70px;}
+.featured .left:hover{background:url(../image/shopping_bg2.png) no-repeat -35px -150px;}
+.featured .right:hover{background:url(../image/shopping_bg2.png) no-repeat -35px -192px;}
+.featured p{width:146px;font-size:12px;color:#660000;text-align:center;}
+
+
+#footer{height:303px;min-width:1000px;margin-top:10px;background:url(../image/footer_bg.png) repeat-x;overflow:hidden;}
+#footer .footer_top{position:relative;width:960px;height:60px;margin:0 auto;}
+#footer .footer_top .pic1{position:absolute;width:55px;height:55px;background:url(../image/footer_bg_top.png) no-repeat ;left:10px;top:6px;}
+#footer .footer_top .pic2{position:absolute;width:41px;height:36px;background:url(../image/footer_bg_top.png) no-repeat 0 -57px;left:345px;top:13px;}
+#footer .footer_top p{float:left;font-size:14px;color:#cbcbcb;font-weight:bold;line-height:60px;margin-left:72px;}
+#footer .footer_top .search{right:0;top:50%;margin-top:-15px;}
+
+#footer .footer_bottom{width:942px;margin:0 auto;padding-top:28px;overflow:hidden;}
+#footer .footer_bottom ul{width:1200px;margin-left:20px;}
+#footer .footer_bottom li{float:left;margin-right:80px;}
+#footer .footer_bottom h2{font-size:15px;color:#ffffff;padding:4px 0 22px 0;}
+#footer .footer_bottom p{font-size:13px;color:#cfcfcf;line-height:18px;}
+#footer .footer_bottom  #mon{margin-top:24px;}
+#footer .footer_bottom span{color:#ffcc00;}
+
