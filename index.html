@@ -1,355 +1,72 @@
-﻿<!DOCTYPE html >
-<html >
-<head>
-<meta  content="text/html; charset=utf-8" />
-<link href="style/style.css" rel="stylesheet" />
-<title>妙味课堂</title>
-</head>
+---
+layout:     default
+title:      WngLMng's Blog
+subtitle:   嗨，我是王立明，一名来自黑龙江省鹤岗市的男生。<br/>现于无线生活（北京），从事互联网开发工作。
+---
 
-<body>
+<link rel="stylesheet" type="text/css" href="{{ "/assets/css/homepage.css" | prepend: site.baseurl }}">
 
-<div id="top">
-	<ul class="top_menu">
-    	<li><a href="#">Account Sign In</a></li>
-        <li><a href="#">Register</a></li>
-        <li><a href="#">Buyers Guide</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li class="no_dot"><a href="#">Contact</a></li>
+<div class="container--grid home-container">
+    <ul layout="rows top-left" id="MixItUpF13DC5">
+        {% for post in paginator.posts %}
+        {% if post.post-card-type == 'article' %}
+        <li class="mix" style="display: inline-block;" data-bound="">
+            <a href="{{ post.url }}">
+                <div class="card card--article not-visible">
+                    <div class="card-body">
+                        <div class="card-title card-title--articleIfNoImage">{{ post.title }}</div>
+                        <p class="card-description card-description--clamp-14">“{{ post.subtitle }}”</p>
+                        <p class="card-description card-article-preview">
+                            {{ post.content | strip_html | strip_newlines | truncate: 350 }}
+                        </p>
+                        <p></p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-footer-wrapper" layout="row bottom-left">
+                            <div class="card-type is-notShownIfHover">{{ post.date | date: "%F"}}</div>
+                            <div class="card-tag is-notShownIfHover">@{{ site.author }}</div>
+                            <div class="card-tag is-shownIfHover">
+                                {% for tag in post.tags %}
+                                    {{ tag }} &nbsp;&nbsp;
+                                {% endfor %}
+                            </div>
+                            <div class="card-logo is-shownIfHover" self="right"></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {% endif %}
+        {% if post.post-card-type == 'image' %}
+        <li class="mix">
+            <a href="{{ post.url }}">
+    			<div class="card card--article not-visible" >
+    				<div class="card-body">
+    					<div class="card-title">{{ post.title }}</div>
+    					<div class="card-description card-description--clamp-0">
+                            {{ post.content | strip_html | strip_newlines | truncate: 200 }}
+                        </div>
+    				</div>
+    				<div class="card-hero">
+    					<div class="card-image card-image--size-185" data-url="{{ post.card-image }}"></div>
+    				</div>
+    			    <div class="card-footer">
+                        <div class="card-footer-wrapper" layout="row bottom-left">
+                            <div class="card-type is-notShownIfHover">{{ post.date | date: "%F"}}</div>
+                            <div class="card-tag is-notShownIfHover">@{{ site.author }}</div>
+                            <div class="card-tag is-shownIfHover">
+                                {% for tag in post.tags %}
+                                    {{ tag }} &nbsp;&nbsp;
+                                {% endfor %}
+                            </div>
+                            <div class="card-logo is-shownIfHover" self="right"></div>
+                        </div>
+    			    </div>
+    		     </div>
+		    </a>
+        </li>
+        {% endif %}
+        {% endfor %}
     </ul>
-    <ul class="top_bar">
-    	<li class="phone">132 7123 6931</li>
-        <li class="help"><a href="#">Live Help</a></li>
-        <li class="space"><a href="#"><img  src="image/top_img1.png" alt="加拿大 " title="加拿大"/></a></li>
-        <li class="space"><a href="#"><img src="image/top_img2.png" alt="美国 " title="美国"/></a></li>
-    </ul>
-
+    {% include pagination.html %}
 </div>
-<div id="header">
-	<div id="shopping">
-    	<p>0 items in your bag</p>
-        <a href="#">Check Out</a>
-    
-    </div>
-	<h1 title="ECOMMERCE WEBSITE"><a href="#"><img src="image/logo.png" alt="logo" /></a></h1>
-    <div class="search">
-    	<form action="">
-        	<input id="text1" class="text" type="text" value="Search website" />
-            <input class="btn" type="submit" value="" />
-        </form>
-            
-    </div>
-
-
-</div>
-<div id="nav" >
-	<ul>
-    	<li class="action"><a href="#"><strong><span>HOME</span></strong></a></li>
-       <li ><a href="#"><strong><span>LATEST ARRIVALS</span></strong></a></li>
-       <li ><a href="#"><strong><span>MEN'S</span></strong></a></li>
-       <li ><a href="#"><strong><span>WOMEN'S</span></strong></a></li>
-       <li ><a href="#"><strong><span>KIDS</span></strong></a></li>
-       <li ><a href="#"><strong><span>BRANDS</span></strong></a></li>
-       <li ><a href="#"><strong><span>SALE</span></strong></a></li>
-       <li ><a href="#"><strong><span>GIFT CARDS</span></strong></a></li>
-       <li ><a href="#"><strong><span>FREEBIES</span></strong></a></li>
-    
-    </ul>
-
-
-
-
-</div>
-<div id="content">
-	<div class="top_content">
-       <div class="content_bottom">
-      <div id="ab">
-       <div id="abs">
-    	<ul>
-        	<li><a href="#" ><img src="image/sale-img/sale_picture2.png" alt="#" title="#" /></a></li>
-            <li><a href="#" ><img src="image/sale-img/sale_picture1.png" alt="#" title="#" /></a></li>
-            <li><a href="#" ><img src="image/sale-img/sale_picture3.png" alt="#" title="#" /></a></li>
-            <li><a href="#" ><img src="image/sale-img/sale_picture4.png" alt="#" title="#" /></a></li>
-            <li><a href="#" ><img src="image/sale-img/sale_picture5.png" alt="#" title="#" /></a></li>
-        </ul>
-        </div>
-        <h2>PRODUCT TITLE</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit lacus dapibus ante mattis in adipiscing nibh placerat. Cras bibendum porta diam, non dignissim sapien malesuada vitae. 			        </p>
-        <div id="sale_bg"></div>
-        </div>
-          
-    
-    <div id="med">
-      <div id="aside">
-    	
-        <div id="aside_menu">
-        <h2>Browse Categories</h2>
-        	<ul>
-            	<li><a href="#"><strong><span>Lorem ipsum dolor sit</span></strong></a></li>
-                <li><a href="#"><strong><span>Amet consectetur</span></strong></a></li>
-                <li><a href="#"><strong><span>Adipiscin elit</span></strong></a></li>
-                <li><a href="#"><strong><span>Cras suscipit lacus</span></strong></a></li>
-                <li><a href="#"><strong><span>Dapibus ante mattis</span></strong></a></li>
-                <li><a href="#"><strong><span>Adipiscing nibh placerat</span></strong></a></li>
-                <li><a href="#"><strong><span>Cras bibendum</span></strong></a></li>
-                <li><a href="#"><strong><span>Porta diam elit</span></strong></a></li>
-                <li><a href="#"><strong><span>Adipiscing nibh placerat</span></strong></a></li>
-                <li><a href="#"><strong><span>Cras bibendum</span></strong></a></li>
-                <li><a href="#"><strong><span>Cras bibendum</span></strong></a></li>
-            </ul>
-        </div>
-        <div id="aside_bottom">
-        	<h2>Join our newsletter list<br />
-to get the latest updates</h2>
-
-	<form action="#">
-            <input  class="text" type="text"
- /><br />
- 			<input class="btn" type="submit" value="Join Now"  />  
-     </form>  
-            <ul> 
-            	<li ><a  href="#"><img id="little-1" src="image/little-1.png" alt="#" /></a><p id="ts"  >Follow us on Twitter</p></li>
-                <li><a href="#"><img id="little-2" src="image/little-2.png" alt="#" /></a><p>Become our fan<br />
-on Facebook</p></li>
-                <li><a href="#"><img id="little-3" src="image/little-3.png" alt="#" /></a><p>Connect with us<br />
-on LinkedIn</p></li>
-                <li><a href="#"><img id="little-4" src="image/little4.png" alt="#" /></a><p>Send us your<br />
-email enquiries</p></li>
-			</ul>  
-        </div>
-        <div id="payment">
-        	<img class="pic1" src="image/payment1.png" alt="#" />
-            <img class="pic2" src="image/payment2.gif" alt="#" />
-            <img class="pic3" src="image/payment3.gif" alt="#" />
-        
-        </div>
-        
-      </div>
-    
-    	<div id="med-right">
-        	<div id="sort">
-            	<dl>
-                  <dt> sort by:</dt>
-                  <dd>
-                     <h2>Ascending</h2>			                   <a  href="javascript:;" alt="#" ></a>
-                    <ul>
-                    	<li>some1</li>
-                        <li>some2</li>
-                        <li>some3</li>
-                    </ul>
-                  </dd>
-                  <dd>
-                     <h2>Product Name</h2>			                   <a href="javascript:;" ></a>
-                    <ul>
-                    	<li>some4</li>
-                        <li>some5</li>
-                        <li>some6</li>
-                    </ul>
-                  </dd>
-                  <dd>
-                     <h2>Brand Name</h2>			                   <a href="javascript:;"></a>
-                    <ul>
-                    	<li>some7</li>
-                        <li>some8</li>
-                        <li>some9</li>
-                    </ul>
-                  </dd>
-                  
-                </dl>
-                <P><strong>Items per page</strong>:   <span>12  </span>  /  <span>20  </span>  /  <span class="red-text">30  </span>/ <span class="red-text">50/</span></P>            
-            </div>
-            
-            <div class="products">
-            	<h2>Our Products</h2>
-                <ul>
-                	<li>
-                    	<a href="#" ><img src="image/pic_list/1.jpg" alt="#"></a>
-                        <h3>Product Name</h3>
-                        <p>Price:<span> $12.99</span></p>
-                    
-                    </li>
-                    <li>
-                    	<a href="#" ><img src="image/pic_list/2.jpg" alt="#"></a>
-                        <h3>Product Name</h3>
-                        <p>Price:<span> $12.99</span></p>
-                    
-                    </li>
-                    <li>
-                    	<a href="#" ><img src="image/pic_list/3.jpg" alt="#"></a>
-                        <h3>Product Name</h3>
-                        <p>Price:<span> $12.99</span></p>
-                    
-                    </li>
-                    <li>
-                    	<a href="#" ><img src="image/pic_list/4.jpg" alt="#"></a>
-                        <h3>Product Name</h3>
-                        <p>Price:<span> $12.99</span></p>
-                    
-                    </li>
-                    <li>
-                    	<a href="#" ><img src="image/pic_list/1.jpg" alt="#"></a>
-                        <h3>Product Name</h3>
-                        <p>Price:<span> $12.99</span></p>
-                    
-                    </li>
-                    <li>
-                    	<a href="#" ><img src="image/pic_list/2.jpg" alt="#"></a>
-                        <h3>Product Name</h3>
-                        <p>Price:<span> $12.99</span></p>
-                    
-                    </li>
-                    <li>
-                    	<a href="#" ><img src="image/pic_list/3.jpg" alt="#"></a>
-                        <h3>Product Name</h3>
-                        <p>Price:<span> $12.99</span></p>
-                    
-                    </li>
-                    <li>
-                    	<a href="#" ><img src="image/pic_list/4.jpg" alt="#"></a>
-                        <h3>Product Name</h3>
-                        <p>Price:<span> $12.99</span></p>
-                    
-                    </li>
-                    <li>
-                    	<a href="#" ><img src="image/pic_list/1.jpg" alt="#"></a>
-                        <h3>Product Name</h3>
-                        <p>Price:<span> $12.99</span></p>
-                    
-                    </li>
-                    <li>
-                    	<a href="#" ><img src="image/pic_list/2.jpg" alt="#"></a>
-                        <h3>Product Name</h3>
-                        <p>Price:<span> $12.99</span></p>
-                    
-                    </li>
-                    <li>
-                    	<a href="#" ><img src="image/pic_list/3.jpg" alt="#"></a>
-                        <h3>Product Name</h3>
-                        <p>Price:<span> $12.99</span></p>
-                    
-                    </li>
-                    <li>
-                    	<a href="#" ><img src="image/pic_list/4.jpg" alt="#"></a>
-                        <h3>Product Name</h3>
-                        <p>Price:<span> $12.99</span></p>
-                    
-                    </li>
-                </ul>
-            	
-            
-            </div>
-            <div class="page">
-            	<a class="active" href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">NEXT ></a>
-                <a href="#">LAST >></a>
-            
-            </div>
-            <div class="featured">
-            	<h2>FEATURED PRODUCTS</h2>
-              <div class="fea_bg">
-                <ul>
-                	<li><a href="#"><img src="image/pic_list/f1.jpg" alt="#"></a>
-                    	<p>Elegant MP3 player skin PSD download</p>
-                    </li>
-                    <li><a href="#"><img src="image/pic_list/f2.jpg" alt="#"></a>
-                    	<p>Elegant MP3 player skin PSD download</p>
-                    </li>
-                    <li><a href="#"><img src="image/pic_list/f3.jpg" alt="#"></a>
-                    	<p>Elegant MP3 player skin PSD download</p>
-                    </li>
-                
-                </ul>
-                <a class="left" href="#"></a>
-                <a class="right" href="#"></a>
-               </div>
-            </div>
-            
-            
-        
-        </div>
-    </div>
-    
-
-
-    
-     
-       </div> 
-	</div>
-</div>
-
-<div id="footer">
-	<div class="footer_top">
-    	<div class="pic1"></div>
-        <div class="pic2"></div>
-    	<p>Shop online with us safely & securely</p>
-        <p>We ship your orders anywhere!</p>
-        <div class="search">
-    	<form action="">
-        	<input id="text2" class="text" type="text" value="Search website" />
-            <input class="btn" type="submit" value="" />
-        </form>
-        </div>
-    </div>
-    <div class="footer_bottom">
-    	<ul>
-        	<li>
-            	<h2>Company</h2>
-                <p>Home<br>
-About Us<br>
-Blog<br>
-Latest News<br>
-Login<br>
-Join Us</p>
-            </li>
-            <li>
-            	<h2>Categories</h2>
-                <p>Lorem ipsum dolor sit <br>
-Amet consectetur<br> 
-Adipiscin elit<br> 
-Cras suscipit lacus<br> 
-Dapibus ante mattis <br>
-Adipiscing nibh placerat</p>
-            </li>
-            <li>
-            	<h2>Information</h2>
-                <p>My Account<br>
-Rewards<br>
-Terms & Conditions<br>
-Buying Guide<br>
-FAQ</p>
-            </li>
-            <li>
-            	<h2>Social Network</h2>
-                <p>My Account<br>
-Rewards<br>
-Terms & Conditions<br>
-Buying Guide<br>
-FAQ</p>
-            </li>
-            <li>
-            	<h2>Contact Us</h2>
-                <p>Phone: 1.234.567.8901<br>
-Toll-Free: 1.234.567.8901<br>
-Fax: 1.234.567.8901<br>
-Email: <span>Send us an email</span></p>
-<p id="mon">
-MON - SAT 	9am to 7:30pm<br>
-Sundays, holidays closed</p>
-            </li>
-        
-        </ul>
-    
-    </div>
-        
-        
-    
-    
-
-</div> 
-<script src="main.js"></script>
-</body>
-</html>
