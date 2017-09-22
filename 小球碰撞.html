@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>测试</title>
+<style>
+	
+	#wrap,#btn1{padding: 0;margin: 0;}
+	body{background: black;}
+	#wrap{z-index: 2; position: relative;left: 0px;top: 10px;margin-left: 20px;}
+	p{display: inline;}
+	#btn1{background: yellow;width:70px;height:30px;}
+	/*#b_size,#b_radius{position: relative;left: 20px;top: 10px;}	*/
+	#div1{position: absolute;
+	    left: 80px;
+    	top: 0px;
+    }
+    #div2{position: absolute;
+	    left: 265px;
+    	top: 0px;
+    }
+	#b_size,#b_radius{position: relative;
+	    left: 8px;
+    	top: 6px;
+    }
+	span{font-size: 18px;display:inline-block; margin-left: 5px;color: green;}
+	#try{
+		z-index: 1;
+		position: absolute;
+		
+		margin:0;
+		padding: 0;
+		
+	}
+	
+</style>
+</head>
+<body>
+	<div id="wrap" >	
+		<button id="btn1">
+			<p id="btn">选择手动</p>
+		</button>
+		<div id="div1">
+			<span>size: </span><input id="b_size" type="range" name="" value="30">
+		</div>
+		<div id="div2">
+			<span>radius: </span><input id="b_radius" type="range" name="" value="30">
+		</div>
+	</div>
+	<div id="try" onselectstart="return false" draggable=false></div>	
+<script src="example.js"></script>
+</body>
+
+
+</html>
